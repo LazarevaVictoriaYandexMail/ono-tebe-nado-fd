@@ -1,9 +1,17 @@
+* {
+  scroll-behavior: smooth;
+}
 body {
   background: #f0ecec;
 }
 a, address {
 	font-size: 18px;
 	text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 .container {
@@ -16,32 +24,29 @@ a, address {
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
-  height: 293px;
-  justify-items: center;
   align-items: center;
-}
-
-.header__menu {
-  text-transform: lowercase;
+  padding: 92px 50px;
 }
 
 .header__links-list {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 	gap: 26px;
+  justify-self: flex-start
 }
 
 .header__links-list-item {
   list-style: circle;
-	
 }
-.header__link_active{
-	text-decoration: none;
-}
+
 .header__link {
+  text-transform: lowercase;
 	text-decoration: underline;
 	text-underline-offset: 5px
+}
+
+.header__link_active{
+	text-decoration: none;
 }
 
 .header__links-list-item_no-bullit {
@@ -53,21 +58,21 @@ a, address {
   height: 105px;
 }
 
-.adress {
+.address {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-	max-width: 240px;
+  align-items: flex-start; 
 	gap: 5px;
 }
 
-.adress a {
+.address a {
 	text-decoration: underline;
 	text-underline-offset: 5px
 }
 
 .header__address {
-	text-decoration: none;
+  max-width: 240px;
+  justify-self: flex-end;
 }
 
 .cover {
@@ -87,7 +92,7 @@ a, address {
   font-size: 100px;
   letter-spacing: 30px;
   color: #fff;
-  z-index: 2;
+  z-index: 1;
 }
 
 .cover__title span {
@@ -113,31 +118,29 @@ a, address {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
-  padding: 50px 50px;
+  padding: 50px;
   margin-top: auto;
   z-index: 1;
 }
+
 .cover__description-text {
   text-transform: uppercase;
   line-height: 28px;
   font-size: 22px;
-}
-
-.letter-spacing-extended {
+  color: #fff;
   word-spacing: 20px;
 }
 
 .bet-button {
   width: 256px;
   height: 51px;
-  background-color: transparent;
+  background: transparent;
   font-size: 22px;
   color: #fff;
   text-transform: uppercase;
   border: 1px solid #fff;
   font-weight: 500;
-  line-height: 100%;
+  line-height: 1;
 }
 
 .overlay {
@@ -153,24 +156,21 @@ a, address {
 .lots {
   margin-top: 180px;
   padding: 0 24px;
-  align-items: center;
 }
 
 .lots__heading {
+  padding-left: 40px;
+}
+
+.section__title {
   font-size: 40px;
   text-transform: uppercase;
-  padding: 0 40px;
-  margin-bottom: 27px;
-}
-ul,
-li {
-  list-style: none;
 }
 
 .lots__card-list {
   display: flex;
-  flex-direction: row;
   gap: 25px;
+  margin-top: 27px;
   margin-bottom: 30px;
 }
 
@@ -193,7 +193,8 @@ li {
   text-decoration: underline;
   padding: 48px 40px;
   font-size: 22px;
-	z-index: 2;
+  line-height: 1.2;
+	z-index: 1;
 }
 
 .card-text {
@@ -202,7 +203,8 @@ li {
 	padding-bottom: 40px;
   line-height: 1.2;
   font-size: 20px;
-	z-index: 3;
+  font-weight: 400;
+	z-index: 1;
 }
 
 .card_type_film {
@@ -232,12 +234,12 @@ li {
 }
 
 .about {
-  height: 595px;
   display: flex;
   margin-top: 120px;
 	margin-bottom: 180px ;
   padding: 0 24px;
 }
+
 .about__logo {
   border-radius: 50%;
   min-width: 240px;
@@ -248,47 +250,48 @@ li {
   align-items: center;
   margin: 35px 47px;
 }
+
 .about__logo-image {
   width: 148px;
   height: 114px;
-  margin: 35px 72px 47px;
 }
 
-.about__title {
-  margin: 133px 0 13px 0;
+.about__summary {
+   margin-top: 133px;
+}
+
+.about__heading {
+  margin-bottom: 100px;
+}
+
+.about__description {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  /* появился верхний отступ, как убрать */
 }
 
-.about__title-heading {
-  font-size: 40px;
-  text-transform: uppercase;
-  margin-bottom: 100px;
-}
 .about__text {
   flex-wrap: wrap;
   font-size: 20px;
   line-height: 24px;
 }
+
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 180px;
-  justify-items: center;
+  grid-auto-rows: 180px;
   align-items: start;
-	
+  padding: 0 50px;
 }
 
 .footer__menu {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	text-align: center;
 	line-height: 1.5;
 	text-decoration: underline;
+}
+
+.footer__addres {
+  max-width: 260px;
 }
 
 
@@ -297,7 +300,7 @@ li {
   align-items: center;
   justify-content: space-between;
   width: 240px;
-  height: 48px;
+  justify-self: flex-end;
 }
 
 
